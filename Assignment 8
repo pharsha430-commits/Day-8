@@ -1,0 +1,9 @@
+What is the difference between Compiler Error and Exception?
+Compiler Error -
+a. When it occurs:  During the compilation phase, before the program begins execution.
+b. Nature: These are typically syntax errors or type errors that violate the rules of the programming language.  The compiler identifies these issues because the code does not conform to the language's grammar or type system.
+c. Recoverability:  The program cannot be compiled and therefore cannot be executed until all compiler errors are resolved.
+Execption -
+a. When it occurs:  During the runtime phase, while the program is executing.
+b. Nature:  These are unexpected events that disrupt the normal flow of program execution.  They often arise from situations that cannot be anticipated or handled by the compiler, such as invalid input, resource unavailability, or logical errors that only manifest during execution.
+c. Recoverability:  While execptions can cause program termination if unhandled, many programming languages provide mechanisms (like try-catch blocks) to catch and handle execptions, allowing the program to recover and continue execution or gracefully terminate.
