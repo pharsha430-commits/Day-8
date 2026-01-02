@@ -7,3 +7,62 @@ Execption -
 a. When it occurs:  During the runtime phase, while the program is executing.
 b. Nature:  These are unexpected events that disrupt the normal flow of program execution.  They often arise from situations that cannot be anticipated or handled by the compiler, such as invalid input, resource unavailability, or logical errors that only manifest during execution.
 c. Recoverability:  While execptions can cause program termination if unhandled, many programming languages provide mechanisms (like try-catch blocks) to catch and handle execptions, allowing the program to recover and continue execution or gracefully terminate.
+
+package learning;
+
+public class Array_out_of_bounds_handle_exceptions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] num = {5, 10, 20, 25};
+		
+		try {
+            // Trying to access an index that does not exist
+            System.out.println("Accessing element: " + num[5]);
+        }
+		
+		  // Catch block handles 
+        catch (ArrayIndexOutOfBoundsException e) {
+
+            // This message is printed when exception occurs
+            System.out.println("Exception caught: Array index is out of bounds");
+        }
+
+		System.out.println("Program continues after exception handling");
+	}
+
+}
+
+package learning;
+
+import java.util.Scanner;
+
+public class Scanner_input {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner (System.in);
+		
+		try {
+			System.out.println("Enter the first num:  ");
+			int a = sc.nextInt();
+			
+			System.out.println("Enter the second num:  ");
+			int b = sc.nextInt();
+			
+			int result = a/b;
+			
+			System.out.println("Result: " +result);
+		}
+		
+		catch (ArithmeticException e)  {
+			System.out.println("Exception caught:  Cannot divide by zero");
+		}
+		finally {
+			sc.close();
+		}
+		System.out.println("Program Ended Safely");
+	}
+}
